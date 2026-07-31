@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XI RPL 2</title>
+    
+    <!-- Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="LOGO KELAS XI RPL 2.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. LOADING SCREEN -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="spinner"></div>
+            <h2>XI RPL 2</h2>
+            <p>Memuat Masa Depan...</p>
+        </div>
+    </div>
+
+    <!-- FLOATING BACKGROUND SHAPES -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+
+    <!-- 2. NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-code"></i> XI <span>RPL 2</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="active">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#students">Anggota</a></li>
+                <li><a href="#schedule">Jadwal</a></li>
+                <li><a href="#gallery">Galeri</a></li>
+                <li><a href="#stats">Statistik</a></li>
+                <li><a href="#timeline">Kegiatan</a></li>
+                <li><a href="#contact">Kontak</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. HERO SECTION -->
+    <section id="home" class="hero parallax-target">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="badge">Selamat Datang di Portal Resmi</span>
+                <h1>Kami Adalah <br><span class="typing-text" id="typing-text"></span></h1>
+                <p>Wadah kreativitas, inovasi, dan persaudaraan para calon Software Engineer masa depan. Unggul dalam teknologi, solid dalam kebersamaan.</p>
+                <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary btn-ripple">Jelajahi Kelas <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#contact" class="btn btn-secondary btn-ripple">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper floating">
+                    <img src="class.jpg" alt="Foto Kelas XI RPL 2">
+                    <div class="glass-card hero-card">
+                        <i class="fa-solid fa-rocket"></i>
+                        <div>
+                            <h4>Generasi Inovatif</h4>
+                            <p>Siap Menghadapi Industri 5.0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ABOUT CLASS SECTION -->
+    <section id="about" class="about section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Tentang <span>Kelas Kami</span></h2>
+                <p>Mengenal lebih dekat visi, misi, dan struktur kelas XI Rekayasa Perangkat Lunak 2.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card glass-card reveal-left">
+                    <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+                    <h3>Visi Kelas</h3>
+                    <p>Menjadi kelas yang unggul dalam bidang rekayasa perangkat lunak, berkarakter mulia, kreatif, serta adaptif terhadap perkembangan teknologi global.</p>
+                </div>
+                <div class="about-card glass-card reveal-up">
+                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Misi Kelas</h3>
+                    <p>Meningkatkan keterampilan coding, menjaga kekeluargaan, aktif berprestasi di lomba IT, dan saling mendukung dalam mencapai cita-cita.</p>
+                </div>
+                <div class="about-card glass-card reveal-right">
+                    <div class="card-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Wali Kelas</h3>
+                    <h4>Ibu. Iis Widayanti S.Pd</h4>
+                    <p>Pembimbing dan motivator yang senantiasa mengarahkan kami menuju kesuksesan akademik dan karakter.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ANGGOTA KELAS -->
+<section id="students" class="students section-padding bg-light">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2>Anggota <span>Kelas</span></h2>
+            <p>Daftar 36 talenta berbakat XI RPL 2 yang siap mewarnai dunia teknologi.</p>
+        </div>
+
+        <!-- Tombol Navigasi Geser -->
+        <div class="slider-controls">
+            <button id="slideLeft" class="slider-btn" aria-label="Geser Kiri">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button id="slideRight" class="slider-btn" aria-label="Geser Kanan">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Container Slider 36 Siswa -->
+        <div class="students-slider" id="studentsSlider">
+            
+            <!-- Siswa 1 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="patir.jpg" alt="Fatir">
+                    <span class="absen-badge">Absen 12</span>
+                </div>
+                <div class="student-info">
+                    <h3>Fatir Putra Pratama</h3>
+                    <p class="role">Ketua Kelas</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> UI/UX Designer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 2 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="maysi1.jpg" alt="Maysie">
+                    <span class="absen-badge">Absen 24</span>
+                </div>
+                <div class="student-info">
+                    <h3>Maysie Fadhilah O.S</h3>
+                    <p class="role">Wakil Ketua</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Fullstack Developer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 3 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="mayhani.jpg" alt="Mayhani">
+                    <span class="absen-badge">Absen 23</span>
+                </div>
+                <div class="student-info">
+                    <h3>Mayhani Pramudita</h3>
+                    <p class="role">Sekretaris 1</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Data Scientist</p>
+                </div>
+            </div>
+
+            <!-- Siswa 4 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="aida.jpg" alt="Aida">
+                    <span class="absen-badge">Absen 01</span>
+                </div>
+                <div class="student-info">
+                    <h3>Aida Zahra Aulia</h3>
+                    <p class="role">Sekretaris 2</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> DevOps Engineer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 5 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="giyan.jpg" alt="Giyan">
+                    <span class="absen-badge">Absen 13</span>
+                </div>
+                <div class="student-info">
+                    <h3>Giyan Lestari</h3>
+                    <p class="role">Bendahara 1</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Mobile Developer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 6 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="mufidha.jpg" alt="Mufidah">
+                    <span class="absen-badge">Absen 25</span>
+                </div>
+                <div class="student-info">
+                    <h3>Mufidah Ainur Rohma</h3>
+                    <p class="role">Bendahara 2</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Cyber Security Expert</p>
+                </div>
+            </div>
+
+            <!-- Siswa 7 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="nur khofifah.jpg" alt="Nur Khofifah">
+                    <span class="absen-badge">Absen 29</span>
+                </div>
+                <div class="student-info">
+                    <h3>Nur Khofifah Indria N.</h3>
+                    <p class="role">S.Kebersihan 1</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> AI Specialist</p>
+                </div>
+            </div>
+
+            <!-- Siswa 8 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="dinda ayzlia.jpg" alt="Siswa 9">
+                    <span class="absen-badge">Absen 09</span>
+                </div>
+                <div class="student-info">
+                    <h3>Dinda Azylia Nur F.</h3>
+                    <p class="role">S.Kebersihan 2</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Cloud Architect</p>
+                </div>
+            </div>
+
+            <!-- Siswa 9 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="marpa.jpg" alt="Marfa">
+                    <span class="absen-badge">Absen 20</span>
+                </div>
+                <div class="student-info">
+                    <h3>Marfa Oktafiana A</h3>
+                    <p class="role">S.Keamanan 1</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Game Developer</p>
+                </div>
+            </div>
+
+            
+
+            <!-- Siswa 10 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="sifara.jpg" alt="Sifara">
+                    <span class="absen-badge">Absen 33</span>
+                </div>
+                <div class="student-info">
+                    <h3>Sifara Ika Nurohmah</h3>
+                    <p class="role">S.Keamanan 2</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Backend Engineer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 11 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="ALFIN.jpg" alt="Alfin">
+                    <span class="absen-badge">Absen 02</span>
+                </div>
+                <div class="student-info">
+                    <h3>Alfin Febrianto Hidayat</h3>
+                    <p class="role">S.Ketertiban 1</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> QA Engineer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 12 -->
+             <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="hann.jpg" alt="Hanif">
+                    <span class="absen-badge">Absen 15</span>
+                </div>
+                <div class="student-info">
+                    <h3>Hanif Maulana Saiq A</h3>
+                    <p class="role">S.Ketertiban 2</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Blockchain Developer</p>
+                </div>
+            </div>
+
+            
+            <!-- Siswa 23 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="Anita.jpg" alt="Siswa 3">
+                    <span class="absen-badge">Absen 03</span>
+                </div>
+                <div class="student-info">
+                    <h3>Anita Wulandari</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Software Developer</p>
+                </div>
+            </div>
+             
+            <!-- Siswa 15 -->
+           <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="asria.jpg" alt="Siswa 4">
+                    <span class="absen-badge">Absen 04</span>
+                </div>
+                <div class="student-info">
+                    <h3>Asria Ningsikh</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Frontend Developer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 13 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="bait.jpg" alt="Siswa 5">
+                    <span class="absen-badge">Absen 05</span>
+                </div>
+                <div class="student-info">
+                    <h3>Bait Qorisu</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Backend Engineer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 25 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="deden.jpg" alt="Siswa 6">
+                    <span class="absen-badge">Absen 06</span>
+                </div>
+                <div class="student-info">
+                    <h3>Deden Al Amin</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Mobile Developer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 29 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="DIAN WULANDARI .jpg" alt="Siswa 7">
+                    <span class="absen-badge">Absen 07</span>
+                </div>
+                <div class="student-info">
+                    <h3>Dian Wulandari</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Data Scientist</p>
+                </div>
+            </div>
+
+            <!-- Siswa 20 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="dinda ayu.jpg" alt="Siswa 8">
+                    <span class="absen-badge">Absen 08</span>
+                </div>
+                <div class="student-info">
+                    <h3>Dinda Ayu Dzulkaidah</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> UI/UX Designer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 33 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="elsa.jpg" alt="Siswa 10">
+                    <span class="absen-badge">Absen 10</span>
+                </div>
+                <div class="student-info">
+                    <h3>Elsa Bela Safira</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Fullstack Developer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 24 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="estung.jpg" alt="Siswa 11">
+                    <span class="absen-badge">Absen 11</span>
+                </div>
+                <div class="student-info">
+                    <h3>Estu Lestari</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> AI Specialist</p>
+                </div>
+            </div>
+
+            <!-- Siswa 14 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="HANIF MAULANA PUTRA.jpg" alt="Siswa 14">
+                    <span class="absen-badge">Absen 14</span>
+                </div>
+                <div class="student-info">
+                    <h3>Hanif Maulana Putra</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Game Developer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 16 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="itang.jpg" alt="Siswa 16">
+                    <span class="absen-badge">Absen 16</span>
+                </div>
+                <div class="student-info">
+                    <h3>Itang Sondy Nugroho</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Cyber Security</p>
+                </div>
+            </div>
+
+            <!-- Siswa 17 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="kesya.jpg" alt="Siswa 17">
+                    <span class="absen-badge">Absen 17</span>
+                </div>
+                <div class="student-info">
+                    <h3>Kesya Aninditia Putri</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Network Engineer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 18 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="keyka.jpg" alt="Siswa 18">
+                    <span class="absen-badge">Absen 18</span>
+                </div>
+                <div class="student-info">
+                    <h3>Keyka Julia Nur Medina</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Database Administrator</p>
+                </div>
+            </div>
+
+            <!-- Siswa 19 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="lathifah.jpg" alt="Siswa 19">
+                    <span class="absen-badge">Absen 19</span>
+                </div>
+                <div class="student-info">
+                    <h3>Lathifah Tri Aliyyu</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> System Analyst</p>
+                </div>
+            </div>
+
+            <!-- Siswa 21 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="maura.jpg" alt="Siswa 21">
+                    <span class="absen-badge">Absen 21</span>
+                </div>
+                <div class="student-info">
+                    <h3>Maura Syahnaz Zifara</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> IT Consultant</p>
+                </div>
+            </div>
+
+            <!-- Siswa 22 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="Maya aj.JPG" alt="Siswa 22">
+                    <span class="absen-badge">Absen 22</span>
+                </div>
+                <div class="student-info">
+                    <h3>Maya Azila Jilviani</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> DevOps Specialist</p>
+                </div>
+            </div>
+
+            
+            <!-- Siswa 26 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="nhz.jpg" alt="Siswa 26">
+                    <span class="absen-badge">Absen 26</span>
+                </div>
+                <div class="student-info">
+                    <h3>Naheza Alif Anansya</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Cloud Engineer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 27 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="tasya.jpg" alt="Siswa 27">
+                    <span class="absen-badge">Absen 27</span>
+                </div>
+                <div class="student-info">
+                    <h3>Natasya Nur Anggranini</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Technical Writer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 28 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="nndi.jpg" alt="Siswa 28">
+                    <span class="absen-badge">Absen 28</span>
+                </div>
+                <div class="student-info">
+                    <h3>Nindi Aolia Zahra</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Scrum Master</p>
+                </div>
+            </div>
+
+            <!-- Siswa 30 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="putri.jpg" alt="Siswa 30">
+                    <span class="absen-badge">Absen 30</span>
+                </div>
+                <div class="student-info">
+                    <h3>Putri Sevia Ramadhani</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Software Engineer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 31 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="Rendii.jpg" alt="Siswa 31">
+                    <span class="absen-badge">Absen 31</span>
+                </div>
+                <div class="student-info">
+                    <h3>Rendi Adit Oktova</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Product Owner</p>
+                </div>
+            </div>
+
+            <!-- Siswa 32 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="ririt.jpg" alt="Siswa 32">
+                    <span class="absen-badge">Absen 32</span>
+                </div>
+                <div class="student-info">
+                    <h3>Ririt Septiana</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Project Manager</p>
+                </div>
+            </div>
+
+            <!-- Siswa 34 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="sisjay.jpeg" alt="Siswa 34">
+                    <span class="absen-badge">Absen 34</span>
+                </div>
+                <div class="student-info">
+                    <h3>Siska Oviani</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Mobile App Developer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 35 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="asih.jpg" alt="Siswa 35">
+                    <span class="absen-badge">Absen 35</span>
+                </div>
+                <div class="student-info">
+                    <h3>Susmiasih</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> QA Engineer</p>
+                </div>
+            </div>
+
+            <!-- Siswa 36 -->
+            <div class="student-card">
+                <div class="student-img-wrapper">
+                    <img src="Uswa.jpg" alt="Siswa 36">
+                    <span class="absen-badge">Absen 36</span>
+                </div>
+                <div class="student-info">
+                    <h3>Uswatun Khasanah</h3>
+                    <p class="role">Anggota</p>
+                    <p class="dream"><i class="fa-solid fa-briefcase"></i> Fullstack Engineer</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- 7. JADWAL PELAJARAN -->
+    <section id="schedule" class="schedule section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Jadwal <span>Pelajaran</span></h2>
+                <p>Agenda pembelajaran mingguan kelas XI RPL 2.</p>
+            </div>
+            <div class="table-responsive reveal-up">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Hari</th>
+                            <th>Jam 1</th>
+                            <th>Jam 2</th>
+                            <th>Jam 3</th>
+                            <th>Jam 4</th>
+                            <th>Jam 5</th>
+                            <th>Jam 6</th>
+                            <th>Jam 7</th>
+                            <th>Jam 8</th>
+                            <th>Jam 9</th>
+                            <th>Jam 10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="day">Senin</td>
+                            <td>BI</td>
+                            <td>BI</td>
+                            <td>BI</td>
+                            <td>PP</td>
+                            <td>PP</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                        </tr>
+                        <tr>
+                            <td class="day">Selasa</td>
+                            <td>Matematika</td>
+                            <td>Matematika</td>
+                            <td>Matematika</td>
+                            <td>Sejarah</td>
+                            <td>Sejarah</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                        </tr>
+                        <tr>
+                            <td class="day">Rabu</td>
+                            <td>Bahasa Inggris</td>
+                            <td>Bahasa Inggris</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>MP</td>
+                            <td>MP</td>
+                            <td>MP</td>
+                            <td>MP</td>
+                        </tr>
+                        <tr>
+                            <td class="day">Kamis</td>
+                            <td>Bimbingan Konseling</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>KK RPL</td>
+                            <td>PKK</td>
+                            <td>PKK</td>
+                            <td>PKK</td>
+                            <td>PKK</td>
+                            <td>PKK</td>
+                        </tr>
+                        <tr>
+                            <td class="day">Jumat</td>
+                            <td>Bahasa Inggris</td>
+                            <td>Bahasa Inggris</td>
+                            <td>PJOK</td>
+                            <td>PJOK</td>
+                            <td>PAI</td>
+                            <td>PAI</td>
+                            <td>PAI</td>
+                            <td>Bahasa Jawa</td>
+                            <td>Bahasa Jawa</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. GALERI -->
+    <section id="gallery" class="gallery section-padding bg-light">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Galeri <span>Momen</span></h2>
+                <p>Dokumentasi kebersamaan dan kegiatan berharga kelas XI RPL 2.</p>
+            </div>
+            <div class="gallery-grid stagger-container">
+                <div class="gallery-item reveal-card">
+                    <img src="lock.jpg" alt="Galeri 1">
+                </div>
+                <div class="gallery-item reveal-card">
+                    <img src="lock.jpg" alt="Galeri 2">
+                </div>
+                <div class="gallery-item reveal-card">
+                    <img src="lock.jpg" alt="Galeri 3">
+                </div>
+                <div class="gallery-item reveal-card">
+                    <img src="lock.jpg" alt="Galeri 4">
+                </div>
+                <div class="gallery-item reveal-card">
+                    <img src="lock.jpg" alt="Galeri 5">
+                </div>
+                <div class="gallery-item reveal-card">
+                    <img src="lock.jpg" alt="Galeri 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. STATISTIK KELAS -->
+    <section id="stats" class="stats section-padding">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card glass-card reveal-up">
+                    <i class="fa-solid fa-user-graduate"></i>
+                    <h3 class="counter" data-target="36">0</h3>
+                    <p>Jumlah Siswa</p>
+                </div>
+                <div class="stat-card glass-card reveal-up">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <h3 class="counter" data-target="10">0</h3>
+                    <p>Guru Pengajar</p>
+                </div>
+                <div class="stat-card glass-card reveal-up">
+                    <i class="fa-solid fa-trophy"></i>
+                    <h3 class="counter" data-target="0">0</h3>
+                    <p>Prestasi Diraih</p>
+                </div>
+                <div class="stat-card glass-card reveal-up">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <h3 class="counter" data-target="12">0</h3>
+                    <p>Mata Pelajaran</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. TIMELINE KEGIATAN -->
+    <section id="timeline" class="timeline-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Timeline <span>Kegiatan</span></h2>
+                <p>Perjalanan dan agenda penting kelas kami selama satu tahun ajaran.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">Juli 2026</span>
+                        <h3>Awal Semester & MPK</h3>
+                        <p>Pembentukan pengurus kelas baru dan penyusunan tata tertib serta target tahunan kelas.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">Okt 2026</span>
+                        <h3>Hackathon Internal</h3>
+                        <p>Kompetisi pemrograman antar kelompok dalam kelas untuk menguji keahlian web development.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">Des 2026</span>
+                        <h3>Pameran Karya IT</h3>
+                        <p>Pameran project aplikasi buatan siswa kepada seluruh warga sekolah dan orang tua.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="date">Feb 2027</span>
+                        <h3>Uji Kompetensi Keahlian (UKK)</h3>
+                        <p>Ujian sertifikasi keahlian rekayasa perangkat lunak berskala nasional.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. CONTACT SECTION -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Hubungi <span>Kami</span></h2>
+                <p>Kirimkan pesan, saran, atau tawaran kolaborasi kepada kelas kami.</p>
+            </div>
+            <div class="contact-wrapper glass-card reveal-up">
+                <form id="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" required placeholder=" ">
+                        <label for="name">Nama Lengkap</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required placeholder=" ">
+                        <label for="email">Alamat Email</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Pesan Anda</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-ripple">Kirim Pesan <i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <i class="fa-solid fa-code"></i> XI <span>RPL 2</span>
+            </div>
+            <p>&copy; 2026 XI RPL 2. Edited By Abs 15</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/xirpl2.officiall?igsh=MWkyMmUyNGRjcGxvdg==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@xirpl2.smkn1rembang?_r=1&_t=ZS-98SE2EoLWxJ" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Kembali ke atas">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
